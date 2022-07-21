@@ -27,7 +27,6 @@ class Tag(BaseModel):
 
 class Post(BaseModel):
     title = models.CharField(max_length=128, verbose_name='Nomi')
-    slug = models.CharField(max_length=128, unique=True)
     content = models.TextField()
     sub_content = models.CharField(max_length=128)
     image = models.ImageField(upload_to="post/", null=True)
@@ -44,3 +43,4 @@ class Post(BaseModel):
     views_count = models.PositiveIntegerField(default=0)
 
     is_popular = models.BooleanField(default=False)
+    is_featured = models.BooleanField(default=False)

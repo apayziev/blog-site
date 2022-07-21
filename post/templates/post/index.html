@@ -1,0 +1,12 @@
+<h3>Post list</h3>
+
+<form method="get">
+    <input type="text " class="form-control me-2" name="q" placeholder="Search by Post title"
+        value=" {{ request.GET.q}}">
+    <button type="submit" class="btn btn-success">Search</button>
+</form>
+
+{% for post in posts %}
+<h4>{{ post.title }}</h4>
+<p>{{ post.content }}</p>
+{% endfor %}

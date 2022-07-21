@@ -20,7 +20,7 @@ class Author(BaseModel):
     instagram_link = models.CharField(max_length=128)
     facebook_link = models.CharField(max_length=128)
     twitter_link = models.CharField(max_length=128)
-    pinterest_link = models.CharField(max_length=128)
+    
 
     posts_count = models.IntegerField(default=0)
     is_top = models.BooleanField(default=False)
